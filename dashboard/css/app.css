@@ -567,3 +567,84 @@ ul.birthday_list li p.birthday_user span.bd_day, ul.newemployee_list li p.emp_us
 	transform: scale(1.1);
 	cursor: pointer;
 }
+/* Body Wrapper */
+.body_widget .panel{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	padding: 10px;	
+}
+.body_widget{
+	padding:10px;
+}
+.body_widget .panel .panel-heading {
+	background: #FFF;
+    border-bottom: 1px solid #DDD;
+    font-size: 24px;
+    font-weight: 400;
+    color: #383838;
+    border-radius: 0;
+	box-shadow: none;
+	padding: 10px 2px;
+
+}
+
+
+/* Radio and CheckBoxes */
+.amzCheck input[type="checkbox"],
+.amzRadio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.amzCheck label, .amzRadio label {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 10px;
+  line-height: 36px;
+  cursor: pointer;
+	font-weight: 400;
+}
+.amzCheck label::before, .amzRadio label::before {
+  content: " ";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #03a9f4;
+  border-radius: 4px;
+  z-index: 1;
+}
+.amzRadio input[type="radio"] + label::before {
+  border-radius: 18px;
+}
+/* Checked */
+.amzCheck input[type="checkbox"]:checked + label,
+.amzRadio input[type="radio"]:checked + label {
+  padding: 0 20px;
+  color: #fff;
+	z-index: 999;
+}
+.amzCheck input[type="checkbox"]:checked + label::before,
+.amzRadio input[type="radio"]:checked + label::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #03a9f4;
+	z-index: -1;
+}
+/* Transition */
+.amzRadio label, .amzCheck label, .amzCheck label::before,
+.amzRadio label::before {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+/************************  
+	Data Table
+****************************/

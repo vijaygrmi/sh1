@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMART HRMS</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!--Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Propeller css -->
+<!--<link href="css/propeller.css" rel="stylesheet">-->
+<!-- Font-Awesome css -->
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="css/font-awesome-animation.min.css" rel="stylesheet">
+<!-- Animate css -->
+<link href="css/animate.css" rel="stylesheet">
+
+<!-- Custom css -->
+<link href="css/menu.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+<link href="css/app.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body style="background: #f0f3f4;">
+<!-- Top Bar -->
+<div class="container-fluid hidden-xs hidden-sm" id="sm-topnav" style="background: #212555;">
+  <nav role="navigation" class="navbar topnavbar">
+    <div class="nav-wrapper">
+		
+      <ul class="nav navbar-nav pull-right" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+		<li class="dropdown topNotification hidden-xs"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-bell" aria-hidden="true"></i></a>
+          
+           	<ul class="dropdown-menu dropdown-lg-menu dropdown-menu-right dropdown-alt">
+            <li class="dropdown-menu-header">
+              <h5>NOTIFICATIONS</h5>
+            </li>
+            <li>
+              <div class="card">
+                <div class="card-body">
+                  <ul class="list-group">
+                    <li class="list-group-item "> <a href="#"> <span class="pull-left"><img src="img/avatars/img-1.jpg" alt="" class="img-circle"></span>
+                      <div class="list-group-item-body">
+                        <div class="list-group-item-heading">Steve Jobs</div>
+                        <div class="list-group-item-text">Do you want to grab some sushi for lunch?</div>
+                      </div>
+                      </a> </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <div class="card-body">
+                  <ul class="list-group ">
+                    <li class="list-group-item "> <a href="#"> <span class="pull-left"><img src="img/avatars/img-2.jpg" alt="" class="img-circle max-w-40 m-r-10 "></span>
+                      <div class="list-group-item-body">
+                        <div class="list-group-item-heading">Bill Gates</div>
+                        <div class="list-group-item-text">Let's schedule a meeting with our design team at 10am.</div>
+                      </div>
+                      </a> </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <div class="card-body">
+                  <ul class="list-group ">
+                    <li class="list-group-item "> <a href="#"> <span class="pull-left"><img src="img/avatars/img-3.jpg" alt="" class="img-circle max-w-40 m-r-10 "></span>
+                      <div class="list-group-item-body">
+                        <div class="list-group-item-heading">Mark Zuckerberg</div>
+                        <div class="list-group-item-text">We're looking to hire two more protypers to our team.</div>
+                      </div>
+                      </a> </li>
+                    <div class="ripple-container"></div>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="dropdown-menu-footer"> <a href="javascript:void(0)"> All notifications </a> </li>
+          </ul>
+        </li>
+        <li class="dropdown avatar-menu"> 
+         <a href="javascript:void(0)" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> 
+         <span class="meta"> <span class="avatar"> <img src="img/avatar.png" alt="" class="img-circle max-w-35"> <i class="badge mini success status"></i> </span> <span class="name">John Doe</span> <span class="caret"></span> </span> </a>
+          <ul class="dropdown-menu dropdown-menu-right" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
+            <li> <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Profile</a> </li>
+            <div class="dropdown-divider"></div>
+            <li> <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Messages</a> </li>
+            <li> <a href="#"><i class="fa fa-gears" aria-hidden="true"></i> Account Settings</a> </li>
+            <li> <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i> Sign Out</a> </li>
+          </ul>
+        </li>
+      </ul>
+      
+      <ul class="pull-right top_search">
+			<li>
+				<div>
+				<input type="text" placeholder="Search here" class="searchbx">
+				<button type="submit"><i class="material-icons" aria-hidden="true">search</i></button>
+			</div>
+			</li>
+		</ul>
+    </div>
+  </nav>
+</div>
+<!-- Menu Bar -->
+<div class="container-fluid p-0 m-0">
+  <div class="sh-menu-bar">
+    <div class="fullwidth-header">
+      <div class="row">
+        <div class="col-md-2 col-xs-6 sh-logo-container">
+          <div class="lp-logo"> <a href="#"> <img src="img/logo.png" alt=""> </a> </div>
+        </div>
+        <div class="header-right-panel clearfix col-md-10 col-sm-10 col-xs-6">
+          <div class="col-xs-6 mobile-nav-icon"> <button class="nav-icon" data-toggle="collapse" data-target="#mobMen"> 
+          	<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+          </div>
+          <div class="overlay">
+	<div class="wrap">
+		<span class="overlay_close"><a href=""><i class="fa fa-close"></i></a></span>
+		<ul class="wrap-nav">
+			<li><a href="#">My Wall</a></li>
+			<li><a href="#">Organization</a>
+			<ul>
+				<li><a href="#">Policies</a></li>
+				<li><a href="#">Employees</a></li>
+				<li><a href="#">Work Groups</a></li>
+				<li><a href="#">Leaves Calendar</a></li>
+				<li><a href="#">Conference Rooms</a></li>
+				<li><a href="#">Conference Calendar</a></li>
+				<li><a href="#">Milestones</a></li>
+				<li><a href="#">Structure</a></li>
+			</ul>
+			</li>
+			<li><a href="#">Attendance</a>
+			<ul>
+				<li><a href="#">My Attendance</a></li>
+				<li><a href="#">Employee Attendance</a></li>
+			</ul>
+			</li>
+			<li><a href="#">Leaves</a>
+			<ul>
+				<li><a href="#">My Leaves/My Permissions</a></li>
+			</ul>
+			</li>
+			<li><a href="#">Help Desk</a>
+			<ul>
+				<li><a href="#">My Tickets</a></li>
+			</ul>
+			</li>
+			<li><a href="#">Expense Claims</a>
+			<ul>
+				<li><a href="#">Dashboard</a></li>
+				<li><a href="#">My Claims</a></li>
+			</ul>
+			</li>
+			<li><a href="#">My Amzur</a>
+			<ul>
+				<li><a href="#">My Profile</a></li>
+				<li><a href="#">My Appraisals</a></li>
+				<li><a href="#">My Work Groups</a></li>
+				<li><a href="#">My Letters</a></li>
+			</ul>
+			</li>
+		</ul>
+		
+	</div>
+</div>
+          <div class="col-md-12 col-xs-12 sh-menu-container clearfix pull-right">
+            <div class="pull-right padding-right-10">
+              <div class="sh-menu menu">
+                <div class="menu-main-container">
+                  <ul id="menu-main-1">
+                    <li><a href="#">My Wall</a></li>
+                    <li class="menu-item-has-children"><a href="#">Organization</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">Employees</a></li>
+                        <li><a href="#">Work Groups</a></li>
+                        <li><a href="#">Leaves Calendar</a></li>
+                        <li><a href="#">Conference Rooms</a></li>
+                        <li><a href="#">Conference Calendar</a></li>
+                        <li><a href="#">Milestones</a></li>
+                        <li><a href="#">Structure</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a href="#">Attendance</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">My Attendance</a></li>
+                        <li><a href="#">Employee Attendance</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a href="#">Leaves</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">My Leaves/My Permissions</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a href="#">Help Desk</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">My Tickets</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a href="#">Expense Claims</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">My Claims</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a href="#">My Amzur</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">My Appraisals</a></li>
+                        <li><a href="#">My Work Groups</a></li>
+                        <li><a href="#">My Letters</a></li>
+                      </ul>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Main Content -->
+<div class="container-fluid">
+  <div class="col-lg-2 col-md-2 col-sm-12 mt-20"> 
+    <!--<div class="profile">
+			<img class="img-responsive" src="img/Profiles/me.png">
+		</div>-->
+    <section class="pcard section_wallProfile">
+      <div class="pcard-profile-pic"> <img class="img-responsive img-circle" src="img/Profiles/me.png"> </div>
+      <span class="profilePic-select"> <i class="fa fa-camera"></i> </span> <!--<span class="profile-edit"> <i class="fa fa-pencil-square-o"></i> </span>-->
+      <div class="pcard-profile-description">
+        <p class="profile-title">John Doe</p>
+        <p class="profile-job">Software Developer</p>
+        <p class="profile-company">Amzur Technologies</p>
+      </div>
+    </section>
+    <section class="section_calender mt-20">
+      <div class="panel widget-myCalendar m-0">
+        <div class="panel-heading"> <i class="material-icons">today</i> 
+          <!--[if lt IE 8]>
+					<i class="material-icons">&#xE8DF;</i>
+				<![endif]--> 
+          My Calendar </div>
+        <div class="panel-body p-5">
+          <ul class="p-0">
+            <li>
+              <div class="cal-right">
+                <p class="cal-meet-title"> <a href="">eTeki Project Meeting</a> </p>
+                <p class="cal-meet-date"> <i class="fa fa-calendar"></i> 08 May 2017 </p>
+                <p class="cal-meet-time"> <i class="fa fa-clock-o"></i> 10:00 AM- 12:00 PM</p>
+              </div>
+            </li>
+            <li>
+              <div class="cal-right">
+                <p class="cal-meet-title"> <a href="">Glava Weekly Meeting</a> </p>
+                <p class="cal-meet-date"> <i class="fa fa-calendar"></i> 09 May 2017 </p>
+                <p class="cal-meet-time"> <i class="fa fa-clock-o"></i> 10:00 AM- 12:00 PM</p>
+              </div>
+            </li>
+            <li>
+              <div class="cal-right">
+                <p class="cal-meet-title"> <a href="">SMART HRMS Requirements Meeting</a> </p>
+                <p class="cal-meet-date"> <i class="fa fa-calendar"></i> 11 May 2017 </p>
+                <p class="cal-meet-time"> <i class="fa fa-clock-o"></i> 10:00 AM- 12:00 PM</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="col-lg-8 col-md-8 col-sm-12 mt-20">
+    <section class="card body_widget">
+      <div class="panel">
+      	<div class="panel-heading">
+      		Forms
+      	</div>
+      	<div class="panel-body">
+      		<form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Firstname</label> <input class="form-control" type="text">
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Lastname</label> <input class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Email</label> <input class="form-control" type="email">
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Website</label> <input class="form-control" type="url">
+                                </div>
+                            </div>
+                        </div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12 col-lg-12">
+								<button class="btn btn-success pull-right" type="submit">Submit</button>
+							</div>
+						</div>
+                    </form>
+      	</div>
+      </div>
+    </section>
+    <section class="card body_widget mt-10">
+      <div class="panel">
+      	<div class="panel-heading">
+      		Forms
+      	</div>
+      	<div class="panel-body">
+      		<form class="form-horizontal">
+                <div class="form-group"><label class="col-sm-2 control-label">Normal</label>
+
+                    <div class="col-sm-10"><input type="text" class="form-control"></div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group"><label class="col-sm-2 control-label">Help text</label>
+
+                    <div class="col-sm-10"><input type="text" class="form-control"> <span class="help-block m-b-none">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                    </div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group"><label class="col-sm-2 control-label">Password</label>
+
+                    <div class="col-sm-10"><input type="password" class="form-control" name="password"></div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group"><label class="col-sm-2 control-label">Placeholder</label>
+
+                    <div class="col-sm-10"><input type="text" placeholder="placeholder" class="form-control"></div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group"><label class="col-lg-2 control-label">Disabled</label>
+
+                    <div class="col-lg-10"><input type="text" disabled="" placeholder="Disabled input here..." class="form-control"></div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group"><label class="col-lg-2 control-label">Static control</label>
+
+                    <div class="col-lg-10"><p class="form-control-static">email@example.com</p></div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group"><label class="col-sm-2 control-label">Select</label>
+
+                    <div class="col-sm-10"><select class="form-control m-b" name="account">
+                        <option>option 1</option>
+                        <option>option 2</option>
+                        <option>option 3</option>
+                        <option>option 4</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group"><label class="col-lg-2 control-label">Radio Buttons</label>
+
+                    <div class="col-lg-10">
+						<div class="radio icheck-peterriver">
+							<input type="radio" id="radio1" name="radioBtn" />
+							<label for="radio1">Radio Button 1</label>
+						</div>
+              		<div class="radio icheck-peterriver">
+							<input type="radio" checked id="radio2" name="radioBtn" />
+							<label for="radio2">Radio Button 2</label>
+						</div>
+               		</div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group"><label class="col-lg-2 control-label">Radio Buttons</label>
+
+                    <div class="col-lg-10 amzRadio">
+						<input type="radio" name="rb" id="rb1" />
+						<label for="rb1">Radio 1</label>
+						<input type="radio" name="rb" id="rb2" />
+						<label for="rb2">Radio 2</label>
+						<input type="radio" name="rb" id="rb3" />
+						<label for="rb3">Radio 3</label>
+               		</div>
+                </div>
+                
+                <div class="hr-line-dashed"></div>
+                <div class="form-group"><label class="col-lg-2 control-label">Checkboxes</label>
+
+                    <div class="col-lg-10">
+						<div class="checkbox icheck-peterriver">
+							<input type="checkbox" id="check1" />
+							<label for="check1">peterriver</label>
+						</div>
+              		<div class="checkbox icheck-peterriver">
+                        <input type="checkbox" checked id="check2" />
+                        <label for="check2">peterriver</label>
+                    </div>
+               		</div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group"><label class="col-lg-2 control-label">Checkboxes</label>
+                    <div class="col-lg-10 amzCheck">
+						<input type="checkbox" name="cb" id="cb1" />
+						<label for="cb1">Checkbox1</label>
+						<input type="checkbox" name="cb" id="cb2" />
+						<label for="cb2">Checkbox2</label>
+						<input type="checkbox" name="cb" id="cb3" />
+						<label for="cb3">Checkbox3</label>
+               		</div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <button class="btn btn-default" type="submit">Cancel</button>
+                        <button class="btn btn-primary" type="submit">Save changes</button>
+                    </div>
+                </div>
+                </form>
+      	</div>
+      	
+                
+      </div>
+    </section>
+  </div>
+  <div class="col-lg-2 col-md-2 col-sm-12 mt-20"> 
+    <!-- Birthdays Section -->
+    <section class="section_birthday">
+      <div class="panel widget-birthdays m-0">
+        <div class="panel-heading"> 
+          <!-- For modern browsers. --> 
+          <i class="material-icons">cake</i> 
+          <!--[if lt IE 8]>
+					<i class="material-icons">&#xE7E9;</i>
+				<![endif]--> 
+          Birthdays </div>
+        <div class="panel-body p-5">
+          <ul class="p-0 birthday_list">
+            <li>
+              <div> <span class="pull-left bd_user_image"><img src="img/avatars/img-1.jpg" class="max-w-40 img-circle" alt="" /></span>
+                <p class="birthday_user"><a href="">John Doe</a><br />
+                  <span class="bd_day">Today</span> </p>
+              </div>
+            </li>
+            <li>
+              <div> <span class="pull-left bd_user_image"><img src="img/avatars/img-2.jpg" class="max-w-40 img-circle" alt="" /></span>
+                <p class="birthday_user"><a href="">John Doe</a><br />
+                  <span class="bd_day">Tomorrow</span> </p>
+              </div>
+            </li>
+            <li>
+              <div> <span class="pull-left bd_user_image"><img src="img/avatars/img-3.jpg" class="max-w-40 img-circle" alt="" /></span>
+                <p class="birthday_user"><a href="">John Doe</a><br />
+                  <span class="bd_day">26 Apr</span> </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- New Employees Section -->
+    <section class="section_newemployee mt-20">
+      <div class="panel widget-newemployee m-0">
+        <div class="panel-heading"> <i class="material-icons">group</i> New Employees</div>
+        <div class="panel-body p-5">
+          <ul class="p-0 newemployee_list">
+            <li>
+              <div> <span class="pull-left emp_user_image"><img src="img/avatars/img-1.jpg" class="max-w-40 img-circle" alt="" /></span>
+                <p class="emp_user"><a href="">John Doe</a><br />
+                  <span class="emp_designation">Trainee Developer</span> </p>
+              </div>
+            </li>
+            <li>
+              <div> <span class="pull-left emp_user_image"><img src="img/avatars/img-1.jpg" class="max-w-40 img-circle" alt="" /></span>
+                <p class="emp_user"><a href="">John Doe</a><br />
+                  <span class="emp_designation">Software Developer</span> </p>
+              </div>
+            </li>
+            <li>
+              <div> <span class="pull-left emp_user_image"><img src="img/avatars/img-1.jpg" class="max-w-40 img-circle" alt="" /></span>
+                <p class="emp_user"><a href="">John Doe</a><br />
+                  <span class="emp_designation">UI UX Designer</span> </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- jQuery --> 
+<script src="js/jquery.min.js"></script> 
+<!-- Bootstrap --> 
+<script src="js/bootstrap.min.js"></script> 
+<!-- Propeller --> 
+<!--<script src="js/propeller.min.js"></script>-->
+<script type="text/javascript">
+var dropdownSelectors = $('.dropdown, .dropup');
+
+// Custom function to read dropdown data
+// =========================
+function dropdownEffectData(target) {
+  // @todo - page level global?
+  var effectInDefault = null,
+      effectOutDefault = null;
+  var dropdown = $(target),
+      dropdownMenu = $('.dropdown-menu', target);
+  var parentUl = dropdown.parents('ul.nav'); 
+
+  // If parent is ul.nav allow global effect settings
+  if (parentUl.size() > 0) {
+    effectInDefault = parentUl.data('dropdown-in') || null;
+    effectOutDefault = parentUl.data('dropdown-out') || null;
+  }
+  
+  return {
+    target:       target,
+    dropdown:     dropdown,
+    dropdownMenu: dropdownMenu,
+    effectIn:     dropdownMenu.data('dropdown-in') || effectInDefault,
+    effectOut:    dropdownMenu.data('dropdown-out') || effectOutDefault,  
+  };
+}
+
+// Custom function to start effect (in or out)
+// =========================
+function dropdownEffectStart(data, effectToStart) {
+  if (effectToStart) {
+    data.dropdown.addClass('dropdown-animating');
+    data.dropdownMenu.addClass('animated');
+    data.dropdownMenu.addClass(effectToStart);    
+  }
+}
+
+// Custom function to read when animation is over
+// =========================
+function dropdownEffectEnd(data, callbackFunc) {
+  var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  data.dropdown.one(animationEnd, function() {
+    data.dropdown.removeClass('dropdown-animating');
+    data.dropdownMenu.removeClass('animated');
+    data.dropdownMenu.removeClass(data.effectIn);
+    data.dropdownMenu.removeClass(data.effectOut);
+    
+    // Custom callback option, used to remove open class in out effect
+    if(typeof callbackFunc == 'function'){
+      callbackFunc();
+    }
+  });
+}
+
+// Bootstrap API hooks
+// =========================
+dropdownSelectors.on({
+  "show.bs.dropdown": function () {
+    // On show, start in effect
+    var dropdown = dropdownEffectData(this);
+    dropdownEffectStart(dropdown, dropdown.effectIn);
+  },
+  "shown.bs.dropdown": function () {
+    // On shown, remove in effect once complete
+    var dropdown = dropdownEffectData(this);
+    if (dropdown.effectIn && dropdown.effectOut) {
+      dropdownEffectEnd(dropdown, function() {}); 
+    }
+  },  
+  "hide.bs.dropdown":  function(e) {
+    // On hide, start out effect
+    var dropdown = dropdownEffectData(this);
+    if (dropdown.effectOut) {
+      e.preventDefault();   
+      dropdownEffectStart(dropdown, dropdown.effectOut);   
+      dropdownEffectEnd(dropdown, function() {
+        dropdown.dropdown.removeClass('open');
+      }); 
+    }    
+  }, 
+});
+	
+	
+	$(document).ready(function(){
+    $(".nav-icon").click(function(){
+        $(".overlay").fadeToggle(200);
+       $(this).toggleClass('btn-open').toggleClass('btn-close');
+    });
+});
+$('.overlay_close a i').on('click', function(){
+    open = false;
+});
+</script>
+</body>
+</html>
