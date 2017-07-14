@@ -833,10 +833,15 @@ input:focus::-webkit-input-placeholder {
     right: 2%;
     bottom: 0;
     background: #f1f1f1;
+    box-shadow: 0 -1px 10px 2px #dcdbdb;
 }
 
 .chatSection {
     padding: 10px;
+}
+
+.chatHeader {
+    background: #ffc74d;
 }
 
 .chatHeadControls {
@@ -844,8 +849,19 @@ input:focus::-webkit-input-placeholder {
     float: right;
 }
 
-.chatHeadControls span {
+.chatHeadControls a span {
     padding: 4px;
+}
+
+.chatHeadControls a span i {
+    color: #333;
+}
+
+.chatHeadControls a span i.fa-window-minimize {
+    font-size: 11px;
+    top: 14px;
+    position: absolute;
+    right: 36px;
 }
 
 .chatBody {
@@ -854,10 +870,14 @@ input:focus::-webkit-input-placeholder {
 }
 
 .chatContent {
-    height: 500px;
+    height: 350px;
     padding: 10px;
     overflow-y: scroll;
     overflow-x: hidden;
+}
+
+.chatFooterControls {
+    position: relative;
 }
 
 .chat ul {
@@ -886,7 +906,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 .chat ul li .date {
-    font-size: 14px;
+    font-size: 12px;
     color: #a6a6a6;
 }
 
@@ -895,8 +915,19 @@ input:focus::-webkit-input-placeholder {
     padding: 10px;
     position: relative;
     color: #fff;
-    font-size: 15px;
-    background-color: #2ECC71;
+    font-size: 13px;
+    background-color: #607d8b;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.chat ul li.other .message {
+    display: block;
+    padding: 10px;
+    position: relative;
+    color: #fff;
+    font-size: 13px;
+    background-color: #4CAF50;
     border-radius: 3px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
@@ -909,11 +940,20 @@ input:focus::-webkit-input-placeholder {
     border-right: 16px solid transparent;
 }
 
+.chat ul li.other .message:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    border-top: 17px solid #4CAF50;
+    border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
+}
+
 .chat ul li .message:after {
     content: '';
     position: absolute;
     top: 0;
-    border-top: 17px solid #2ECC71;
+    border-top: 17px solid #607d8b;
     border-left: 17px solid transparent;
     border-right: 17px solid transparent;
 }
