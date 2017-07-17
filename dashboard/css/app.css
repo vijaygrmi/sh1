@@ -841,7 +841,9 @@ input:focus::-webkit-input-placeholder {
 }
 
 .chatHeader {
-    background: #ffc74d;
+    /*background: #ffc74d;*/
+    background: #f5f5f5;
+    border-bottom: 1px solid #e8e8e8;
 }
 
 .chatHeadControls {
@@ -916,7 +918,7 @@ input:focus::-webkit-input-placeholder {
     position: relative;
     color: #fff;
     font-size: 13px;
-    background-color: #607d8b;
+    background-color: #1b2a38;
     border-radius: 3px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
@@ -953,7 +955,7 @@ input:focus::-webkit-input-placeholder {
     content: '';
     position: absolute;
     top: 0;
-    border-top: 17px solid #607d8b;
+    border-top: 17px solid #1b2a38;
     border-left: 17px solid transparent;
     border-right: 17px solid transparent;
 }
@@ -1044,4 +1046,27 @@ input:focus::-webkit-input-placeholder {
     content: '';
     left: 0;
     margin: 0 0 0 -15px;
+}
+
+.chatArea {
+    padding: 0;
+    margin: 0;
+}
+
+.chatSend {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: url('../img/send.png') no-repeat 0 0;
+    width: 30px;
+    height: 50px;
+    border: 0;
+    outline: none;
+}
+
+.chatSend:hover,
+.chatSend:active {
+    background: url('../img/send-hover.png') no-repeat 0 0;
+    border: 0;
+    outline: none;
 }
