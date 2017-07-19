@@ -1070,3 +1070,34 @@ input:focus::-webkit-input-placeholder {
     border: 0;
     outline: none;
 }
+/** Table CSS **/
+.table-hrms table.table-striped tbody tr:nth-of-type(odd){
+	background: #fafbfb;
+	border-left: 4px solid #fafbfb;
+}
+.table-hrms table.table-striped tbody tr td{
+	padding: 0.75rem;    vertical-align: middle;
+}
+.table-hrms table.table-hover>tbody>tr{
+	border-left: 4px solid #FFF;
+}
+.table-hrms table.table-hover>tbody>tr:hover {
+	background-color: none;
+	border-left: 4px solid #607D8B;
+	box-shadow: 0px 1px 5px #DDD;
+}
+.label-normal{
+	font-weight:400 !important;
+}
+.round{
+	line-height: 32px;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 100%;
+    background: #1e88e5;
+}
+.round.round-info{background:#1e88e5}.round.round-warning{background:#ffb22b}.round.round-danger{background:#fc4b6c}.round.round-success{background:#26c6da}.round.round-primary{background:#7460ee}
