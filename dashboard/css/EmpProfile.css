@@ -1,0 +1,67 @@
+section.bx-empInfo {
+    /* background: #f7f7f7;
+    padding: 10px; */
+    box-sizing: border-box;
+    border: 1px solid #ececec;
+}
+
+section.bx-empInfo img {
+    width: 100%;
+    /* border: 1px solid #e8e8e8; */
+    margin: 0 auto;
+    border-radius: 2px;
+    border-bottom: 3px solid #ececec;
+}
+
+section.bx-empInfo ul {
+    margin: 0;
+    padding: 0;
+}
+
+section.bx-empInfo div.empDetails {
+    margin: 0;
+    padding: 10px 0;
+    box-sizing: border-box;
+    background: #f1f3f5;
+}
+
+section.bx-empInfo ul li {
+    list-style-type: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 2px 0;
+    color: #3e3e3e;
+}
+
+section.bx-empInfo ul li.empName {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.empLabel {
+    font-weight: 500;
+}
+
+.empBx {
+    border-bottom: 3px solid #e4e4e4;
+    padding: 0 10px 10px 10px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background: #fdfdfd;
+    border-right: 1px solid #e4e4e4;
+    border-top: 1px solid #e4e4e4;
+    border-left: 1px solid #e4e4e4;
+    margin-bottom: 10px;
+}
+
+.empLabelBx {
+    overflow: auto;
+    padding: 5px 0;
+}
+
+.sec_hdd1 {
+    border-bottom: 1px dashed #DDD;
+    font-size: 16px;
+    line-height: 30px;
+}
