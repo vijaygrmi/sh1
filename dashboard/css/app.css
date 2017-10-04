@@ -8,8 +8,8 @@
 }
 
 .WallPostIcons a:hover i {
-    color: #2b2b2b;
-    transform: scale(1.1);
+    color: #0078d7;
+    transform: scale(1.05);
 }
 
 .wallPost img {

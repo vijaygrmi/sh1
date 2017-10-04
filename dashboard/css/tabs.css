@@ -1,0 +1,42 @@
+.customtab {
+    border-bottom: 2px solid #f7fafc;
+}
+
+.customtab li.active a,
+.customtab li.active a:focus,
+.customtab li.active a:hover {
+    background: #fff;
+    border: 0;
+    border-bottom: 2px solid #ff6849;
+    margin-bottom: -1px;
+    color: #ff6849;
+}
+
+.customtab li a,
+.customtab li a:focus,
+.customtab li a:hover {
+    border: 0;
+}
+
+.customtab2 {
+    border-bottom: 1px solid #f7fafc;
+    border-top: 1px solid #f7fafc;
+    padding: 10px 0;
+}
+
+.customtab2 li.active a,
+.customtab2 li.active a:focus,
+.customtab2 li.active a:hover {
+    background: #ff6849;
+    border: 1px solid #ff6849;
+    color: #fff;
+}
+
+.customtab2 li a,
+.customtab2 li a:focus,
+.customtab2 li a:hover {
+    border: 0;
+}
+
+
+/*http://eliteadmin.themedesigner.in/demos/eliteadmin-university/tabs.html*/
