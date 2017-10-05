@@ -313,7 +313,7 @@
 							</div>
                        	</div>
                        	<div class="col-md-6 col-lg-6 col-sm-12">
-                       		&nbsp;
+                       		&nbsp;<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Open Modal</button>
                        	</div>
                        </div>
                        <div class="row">
@@ -494,6 +494,29 @@
             </section>
         </div>
     </div>
+    
+    <!-- Modal -->
+	<div id="myModal" class="modal fade hrmModal" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">Alert</h4>
+		  </div>
+		  <div class="modal-body">
+			<p>Are You Sure Want to Delete the Record</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default btn-primary" data-dismiss="modal">Yes</button>
+			<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+		  </div>
+		</div>
+
+	  </div>
+	</div>
+    <!-- /Modal -->
     
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>

@@ -332,3 +332,32 @@ border: 1px solid #e6e6e6;
   color: rgba(46, 64, 87, 0.4);
   pointer-events: none;
 }
+
+/****************** 
+	Modal Popup 
+******************/
+.hrmModal .modal-dialog .modal-content{
+	border-radius: 6px;
+	border: none;
+	background: #fff;
+}
+
+.hrmModal .modal-dialog .modal-content .modal-header{
+	border-bottom:0;
+	
+}
+.hrmModal .modal-dialog .modal-content .modal-header .close{
+	font-size:26px; font-weight: 400; text-shadow: none; opacity: 0.6;
+}
+.hrmModal .modal-dialog .modal-content .modal-header .close:hover, .hrmModal .modal-dialog .modal-content .modal-header .close:focus, .hrmModal .modal-dialog .modal-content .modal-header .close:active{
+	opacity:0.8;
+}  
+.hrmModal .modal-dialog .modal-content .modal-footer {
+    border-top: none;
+    background: #eaeaea;padding: 10px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+.modal.hrmModal  {
+  background-color:rgba(0,0,0,0.6);
+}
